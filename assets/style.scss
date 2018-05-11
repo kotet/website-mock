@@ -75,6 +75,11 @@ h1, h2 {
             position: relative;
             color: $foreground-white;
         }
+        @media (max-width: 800px) {
+            span {
+                margin-left: 1em;
+            }
+        }
         @media (min-width: 800px) {
             span {
                 margin: 0 0 0 calc((800px - 100vw) / 2);
