@@ -1,79 +1,112 @@
 ---
 ---
 
-$white: #EEEEEE;
-$gray: #BDBDBD;
-$gray-tp: rgba(33, 33, 33, .5);
-
 html, body {
     min-height: 100%;
     margin: 0;
-    scroll-behavior:smooth;
-    color: $white;
-}
-
-.nav-wrapper {
-    position: fixed;
-    text-align: right;
-    right: 0;
-    top: 0;
-    li {
-        list-style: none;
-        background: $gray-tp;
-        margin-top: 1px;
-        border-left: 6px solid $white;
-        padding: 0.5em;
-    }
-    a {
-        color: $white;
-    }
-}
-
-.pane {
-    width: 100%;
-    height: 100vh;
-    margin: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-h1,h2 {
-    margin: 0;
-    font-weight: 100;
-    font-family: 'Roboto', sans-serif;
-    border-bottom: 1px solid $white;
-    text-align: center;
+    font-family: 'Gaegu', cursive;
+    position: relative;
 }
 
 h1 {
-    font-size: 60px;
+    text-align: center;
 }
 
 h2 {
-    font-size: 30px;
+    font-weight: 300;
+    font-size: 10vw;
+}
+
+nav, input {
+    display: none;
+}
+
+.pane {
+    height: 100vh;
+    margin: 0 0 0 auto;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: lightblue;
 }
 
 .top {
-    background: #01579B;
-    background-image: url(key.jpg);
-    background-position: right;
-    background-size: cover;
+    background: #008cbc;
 }
 
-.top-title {
-    text-align: center;
-    word-break: keep-all;
+.aaa {
+    background: #007500;
 }
 
-.news {
-    background: #827717;
-    background-image: url(desktop.jpg);
-    background-position: left;
-    background-size: cover;
+.bbb {
+    background: #e6c700;
 }
 
-.content {
-    background: $gray-tp;
-    padding: 1em;
+.ccc {
+    background: #db2f27;
+}
+
+@media (min-width: 800px) {
+    nav {
+        display: initial;
+        position: fixed;
+        height: 100vh;
+        width: 20vw;
+        max-width: 200px;
+        background: #fbfbfb;
+    }
+    
+    ul {
+        padding: 0;
+        li {
+            width: 100%;
+            list-style: none;
+            background: lightblue;
+            label {
+                display: block;
+                padding: 15px;
+                font-size: 20px;
+                transition: all 300ms 0s ease;
+            }
+            label:hover {
+                font-size: 25px;
+            }
+        }
+    }
+    
+    input {
+        display: none;
+    }
+    
+    .pane {
+        position: absolute;
+        right: 0;
+        width: 80vw;
+        min-width: calc(100vw - 200px);
+        display: flex;
+        opacity: 0;
+        z-index: 0;
+        transition: all 300ms 0s ease;
+    }
+
+    input#top:checked ~ .pane.top {
+        opacity: 1;
+        z-index: 1000;
+    }
+
+    input#aaa:checked ~ .pane.aaa {
+        opacity: 1;
+        z-index: 1000;
+    }
+
+    input#bbb:checked ~ .pane.bbb {
+        opacity: 1;
+        z-index: 1000;
+    }
+
+    input#ccc:checked ~ .pane.ccc {
+        opacity: 1;
+        z-index: 1000;
+    }
 }

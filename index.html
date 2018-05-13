@@ -9,36 +9,50 @@
     <meta name="author" content="Kotet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu:300" rel="stylesheet">
 </head>
 
 <body>
-    <nav class="nav-wrapper">
+    <input type="radio" name="tab" id="top" checked/>
+    <input type="radio" name="tab" id="aaa" />
+    <input type="radio" name="tab" id="bbb" />
+    <input type="radio" name="tab" id="ccc" />
+    <nav>
+        <h1>APUSEC</h1>
         <ul>
-            <li>
-                <a href="#top">TOP</a>
+            <li class="top">
+                <label for="top">TOP</label>
             </li>
-            <li>
-                <a href="#news">NEWS</a>
+            <li class="aaa">
+                <label for="aaa">AAA</label>
+            </li>
+            <li class="bbb">
+                <label for="bbb">BBB</label>
+            </li>
+            <li class="ccc">
+                <label for="ccc">CCC</label>
             </li>
         </ul>
     </nav>
-    <section class="pane top" id="top">
-        <div class="top-title">
-            <h1>APUSEC</h1>
-            <p>愛知県立大学情報<wbr>セキュリティサークル</p>
-        </div>
+    <section class="pane top">
+        <article>
+            <h2>APUSEC</h2>
+        </article>
     </section>
-    <section class="pane news" id="news">
-        <div class="content">
-            <h2>NEWS</h2>
-            <ul>
-                <li>AAAAAA AAAAAA AAAAAA AAAAAA (AA/AA)</li>
-                <li>BBBBBB BBBBBB BBBBBB BBBBBB (BB/BB)</li>
-                <li>CCCCCC CCCCCC CCCCCC CCCCCC (CC/CC)</li>
-                <li>DDDDDD DDDDDD DDDDDD DDDDDD (DD/DD)</li>
-            </ul>
-        </div>
+    <section class="pane aaa">
+        <article>
+            <h2>AAA</h2>
+        </article>
+    </section>
+    <section class="pane bbb">
+        <article>
+            <h2>BBB</h2>
+        </article>
+    </section>
+    <section class="pane ccc">
+        <article>
+            <h2>CCC</h2>
+        </article>
     </section>
 </body>
 
