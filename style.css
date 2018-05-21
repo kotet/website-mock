@@ -3,6 +3,7 @@ html, body {
     padding: 0;
     min-height: 100vh;
     background-color: #eee5e0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .pane {
